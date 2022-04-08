@@ -264,7 +264,8 @@ def tudo():
 
   info["text"]=printao
 
-# create the root window
+
+  
 root = tk.Tk()
 root.title('SPURRvsHALL')
 
@@ -311,9 +312,9 @@ listbox['yscrollcommand'] = scrollbar.set
 
 
 def items_selected(event):
-    # get selected indices
+  
     selected_indices = listbox.curselection()
-    # get selected items
+    
     selected_langs = ",".join([listbox.get(i) for i in selected_indices])
     read_file = pd.read_excel('Cubagemvolume.xlsx', sheet_name=selected_langs)
     read_file.to_csv('Cubagemvolume.csv', index=None, header=True)
