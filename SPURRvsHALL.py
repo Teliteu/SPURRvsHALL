@@ -282,7 +282,6 @@ info.grid(column= 1, row=2)
 xl = pd.ExcelFile("Cubagemvolume.xlsx")
 xl1 = xl.sheet_names
 
-# create a list box
 langs = (xl1)
 
 langs_var = tk.StringVar(value=langs)
@@ -299,7 +298,7 @@ listbox.grid(
     sticky='nwes'
 )
 
-# link a scrollbar to a list
+
 scrollbar = ttk.Scrollbar(
     root,
     orient='vertical',
@@ -309,7 +308,6 @@ scrollbar = ttk.Scrollbar(
 listbox['yscrollcommand'] = scrollbar.set
 
 
-# handle event
 
 
 def items_selected(event):
